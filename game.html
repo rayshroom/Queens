@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏解题助手 - 分析页面</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="game-title">Queens</h1>
+        <div class="upload-area" id="uploadArea">
+            <p>点击或拖拽截图到这里</p>
+            <input type="file" id="fileInput" accept="image/*" style="display: none;">
+        </div>
+        <div class="preview-container" id="previewContainer" style="display: none;">
+            <div class="control-panel">
+                <button id="solveButton" disabled>求解</button>
+                <p id="statusMessage" class="status-message"></p>
+            </div>
+            <img id="preview" src="" alt="预览图">
+            <div class="canvas-container">
+                <canvas id="regionsCanvas"></canvas>
+                <canvas id="solutionCanvas"></canvas>
+                <!-- debugCanvas 会通过 JavaScript 动态添加 -->
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html> 
