@@ -29,7 +29,7 @@ function setupSolveButton() {
 
     solveButton.addEventListener('click', () => {
         if (currentGameBoard) {
-            updateButtonState(false, '正在求解...');
+            updateButtonState(false, 'Solving...');
             // 确保solutionCanvas可见
             solutionCanvas.style.display = 'block';
             imageProcessor.postMessage({
@@ -40,7 +40,7 @@ function setupSolveButton() {
     });
 
     // 初始状态
-    updateButtonState(false, '请上传游戏板图片');
+    updateButtonState(false, 'Please upload a game board image');
 }
 
 // 更新按钮状态和消息
@@ -95,7 +95,7 @@ function setupImageUpload() {
     // 处理上传的文件
     function handleFile(file) {
         if (!file.type.startsWith('image/')) {
-            alert('请上传图片文件');
+            alert('Please upload an image file');
             return;
         }
 
@@ -106,7 +106,7 @@ function setupImageUpload() {
         const solutionCanvas = document.getElementById('solutionCanvas');
 
         // 重置状态
-        updateButtonState(false, '正在处理图片...');
+        updateButtonState(false, 'Processing image...');
         currentGameBoard = null;
 
         const reader = new FileReader();
@@ -282,7 +282,7 @@ function drawDetectedBoard(board) {
     // 显示检测到的大小
     ctx.fillStyle = 'rgba(0, 255, 0, 0.8)';
     ctx.font = '20px Arial';
-    ctx.fillText(`检测到 ${board.size}x${board.size} 的游戏板`, 10, 30);
+    ctx.fillText(`Detected ${board.size}x${board.size} game board`, 10, 30);
 }
 
 // 显示解决方案

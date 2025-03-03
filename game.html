@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>游戏解题助手 - 分析页面</title>
+    <title>Game Solver - Analysis</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1 id="game-title">Queens</h1>
         <div class="upload-area" id="uploadArea">
-            <p>点击或拖拽截图到这里</p>
+            <p>Drag and drop the screenshot here</p>
             <input type="file" id="fileInput" accept="image/*" style="display: none;">
         </div>
         <div class="preview-container" id="previewContainer" style="display: none;">
             <div class="control-panel">
-                <button id="solveButton" disabled>求解</button>
+                <button id="solveButton" disabled>Solve</button>
                 <p id="statusMessage" class="status-message"></p>
             </div>
-            <img id="preview" src="" alt="预览图">
+            <img id="preview" src="" alt="previewImage">
             <div class="canvas-container">
                 <canvas id="regionsCanvas"></canvas>
                 <canvas id="solutionCanvas"></canvas>
-                <!-- debugCanvas 会通过 JavaScript 动态添加 -->
+                <!-- debugCanvas will be added dynamically via JavaScript -->
             </div>
         </div>
     </div>
