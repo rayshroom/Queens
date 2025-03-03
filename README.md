@@ -1,2 +1,2 @@
 # Queens
-as the name states
+Queens solver for LinkedIn's daily queens game
