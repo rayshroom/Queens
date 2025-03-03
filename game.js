@@ -170,10 +170,10 @@ function initializeWorker() {
             // console.log('检测到游戏板:', e.data.board);
             currentGameBoard = e.data.board;
             drawDetectedBoard(e.data.board);
-            updateButtonState(true, '游戏板已就绪，可以开始求解');
+            updateButtonState(true, 'Game board ready');
         } else if (e.data.type === 'solution') {
             displaySolution(e.data.solution);
-            updateButtonState(true, '求解完成！');
+            updateButtonState(true, 'Solved！');
         } else if (e.data.type === 'colorRegions') {
             // 创建新的画布层来显示颜色区域
             const regionsCanvas = document.getElementById('regionsCanvas');
